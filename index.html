@@ -13,24 +13,47 @@
     <h1>Code Quiz</h1>
   </header>
 
-  <main>
-    <div class="question"></div>
+  
+    <div id="interface">
 
-    <div class="answer-bank">
-      <li><button class="op1"></button></li>
-      <li><button class="op2"></button></li>
-      <li><button class="op3"></button></li>
-      <li><button class="op4"></button></li>
+      <div class="timer">
+        
+        <!-- <div class="timer-text">
+        <div class="timer-count"></div> -->
+        <!-- <h3>seconds remaining</h3> -->
+      </div>
+      <div class="question"></div>
+
+      <div class="answer-bank">
+        <li><button class="op1 option" onclick="checkAnswer"></button></li>
+        <li><button class="op2 option" onclick="checkAnswer"></button></li>
+        <li><button class="op3 option" onclick="checkAnswer"></button></li>
+        <li><button class="op4 option" onclick="checkAnswer"></button></li>
+      </div>
+
+      <div class="correct"></div>
+
+      <button class="start-button">Start</button>
+      <button class="clear-highscores">Clear High Scores</button>
+      
     </div>
+  </div>
+  
+  <div class="results">
+    <h3 class="final-score"></h3>
+    <form>
+      <input type="text" id="highscore-name" />
+      <button class="submit">Submit</button>
 
-    <button class="start-button">Start</button>
+      
+    </form>
+  </div> 
+  
 
-    <div class="timer">
-      <div class="timer-text">
-      <div class="timer-count">10</div>
-      <h3>seconds remaining</h3>
-    </div>
-    
+  <div class="highscores">
+    <h3>High Scores</h3>
+      <ul class="highscores-list"></ul>
+  </div>
   </main>
   <script src="assets/index.js"></script>  
 </body>

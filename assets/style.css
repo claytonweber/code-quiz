@@ -1,4 +1,39 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#interface {
+  background-color: lightblue;
+  padding: 10px;
+}
 .answer-bank {
-  background-color: blue;
+  padding: 20px;
   display: none;
+}
+
+.results {
+  display: none;
+}
+
+button {
+  padding: 5px;
+}
+.timer {
+  color: white;
+}
+
+.highscores {
+  background-color: blue;
+  font-family: sans-serif;
+  color: white;
+  
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+  color: black;
+  line-height: 2em;
 }
