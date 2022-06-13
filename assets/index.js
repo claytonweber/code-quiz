@@ -19,62 +19,47 @@ var correct = document.querySelector(".correct");
 
 let timerCount = 60;
 let score = 0;
-// var questions = [
-//   "Do you like JavaScript",
-//   "Who is hog kisser",
-//   "Do ya love me",
-//   "What is jQuery?"
-// ];
 
-// var answers = [
-//   [
-//     "a. Yes I love JavaScript",
-//     "b. No I hate JavaScript",
-//     "c. What is JavaScript",
-//     "d. Who is JavaScript?"
-//   ]
-
-// ]
 highScores();
 var questions = [
   {
-    question: "Do you like JavaScript?",
-    op1: "Yes",
-    op2: "No",
-    op3: "What is JavaScript",
-    op4: "Who is JavaScript",
+    question: "What is the proper syntax for logging information to the console?",
+    op1: "console.log",
+    op2: "console.table",
+    op3: "log console",
+    op4: "console;log",
     answer: op1
   },
   {
-    question: "Do ysssssou like JavaScript?",
-    op1: "YeSneks",
-    op2: "No",
-    op3: "What is JasddasavaScript",
-    op4: "Who iddddddds JavaScript",
-    answer: op1
+    question: "What is JavaScript?",
+    op1: "It makes websites pretty.",
+    op2: "It allows users to interact with websites.",
+    op3: "It is the structure of a website.",
+    op4: "It is where you can host websites.",
+    answer: op2
   },
   {
-    question: "Do you aaaaalike JavaScript?",
-    op1: "Yeqqqqqqqs",
-    op2: "No",
-    op3: "Whaddddadwwwrrrt is JavaScript",
-    op4: "Who is JavaScript",
-    answer: op1,
+    question: "Which HTML element does JavaScript code go inside?",
+    op1: "<java>",
+    op2: "<code>",
+    op3: "<js>",
+    op4: "<script>",
+    answer: op4,
   },
   {
-      question: "Do you aaaaalikdddddde JavaScript?",
-      op1: "Yeqqqqqqqs",
-      op2: "No",
-      op3: "Whaddddadwwwrrrt is JavaScript",
-      op4: "Who is JavaSsadsadcript",
-      answer: op1
+    question: "Which is a correct for loop?",
+    op1: "for i = 5 then",
+    op2: "i++",
+    op3: "for (i=0; i <= 5; i++)",
+    op4: "for (i++)",
+    answer: op3
   }
   
 ]
 
 
 let questionNumber = 0;
-//when i press start a timer begins
+//when i press srtart a timer begins
 
 startButton.addEventListener("click", startGame);
 clearButton.addEventListener("click", clearHighScores);
@@ -99,14 +84,8 @@ function askQuestion() {
     op2.innerText = questions[questionNumber].op2;
     op3.innerText = questions[questionNumber].op3;
     op4.innerText = questions[questionNumber].op4;
-    //populate an answer based on the option number
-    // op1.append(answers[questionNumber][0]);
-    // op2.append(answers[questionNumber][1]);
-    // op3.append(answers[questionNumber][2]);
-    // op4.append(answers[questionNumber][3]);
-    //increment question number so it can move to the next question
+
     questionNumber++;
-    // console.log("question number: " + questionNumber);
   } else {
     displayResults();
 
@@ -115,12 +94,11 @@ function askQuestion() {
 
   options.forEach(option => {
     option.addEventListener("click", e => {
-      // console.log("does this shit work")
       var selectedOption = e.target;
       console.log(selectedOption)
       if(questions.length > questionNumber) {
       
-        if(selectedOption === questions[questionNumber].answer) {
+        if(selectedOption = questions[questionNumber].answer) {
           console.log("correct!");
           correct.innerHTML = "Correct!";
           askQuestion();

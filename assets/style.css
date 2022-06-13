@@ -24,7 +24,7 @@ button {
 }
 
 .highscores {
-  background-color: blue;
+  background-color: lightblue;
   font-family: sans-serif;
   color: white;
   
@@ -36,4 +36,8 @@ li {
   list-style: none;
   color: black;
   line-height: 2em;
+}
+
+.clear-highscores {
+  margin-top: 20px;
 }
